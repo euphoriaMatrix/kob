@@ -2,8 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PkIndexView from '../views/pk/PkIndexView'
 import RecordIndexView from '../views/record/RecordIndexView'
 import RanklistIndexView from '../views/ranklist/RankListIndexView'
-import UserBotIndexView from '../views/user/UserBotIndexView'
+import UserBotIndexView from '../views/user/bot/UserBotIndexView'
 import NotFound from '../views/error/NotFound'
+import UserAccountLoginView from "@/views/user/account/UserAccountLoginView";
+import userAccountRegisterView from "@/views/user/account/UserAccountRegisterView";
 
 const routes = [
     // 根目录映射到pk页面
@@ -31,6 +33,16 @@ const routes = [
     path: "/user/bot",
     name: "user_bot_index",
     component: UserBotIndexView,
+  },
+  {
+    path: "/user/account/login/",
+    name: "user_account_login",
+    component: UserAccountLoginView,
+  },
+  {
+    path: "/user/account/register",
+    name: "user_account_register",
+    component: userAccountRegisterView,
   },
   {
     path: "/404",
